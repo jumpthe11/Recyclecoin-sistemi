@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+<p>Hesabınızda {{ Cbalance }} CARBON var</p>
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST" action="">
+
+  <div class="from-group">
+
+    {{render_field(form.malzeme, class_="form-control")}}
+    {{render_field(form.deger, class_="form-control")}}
+  </div>
+  </br>
+    <p><input type="submit" class="btn btn-primary" value="Send"></p>
+</form>
+{% endblock %}
